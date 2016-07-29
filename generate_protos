@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+git clone https://github.com/exgp/exgp-proto
+cd exgp-proto
+git checkout proto3
+./generate
+
+cd ..
+mkdir -p ExGP.Messages
+cp exgp-proto/build/* ExGP.Messages/
+
+rm -rf exgp-proto

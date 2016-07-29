@@ -8,7 +8,8 @@
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.0"
-    }
+    },
+    "Google.Protobuf": "3.0.0-beta4"
   },
 
   "frameworks": {

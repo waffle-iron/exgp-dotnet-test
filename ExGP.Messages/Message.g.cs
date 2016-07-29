@@ -10,7 +10,6 @@ using scg = global::System.Collections.Generic;
 namespace ExGP.Messages {
 
   /// <summary>Holder for reflection information generated from message.proto</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public static partial class MessageReflection {
 
     #region Descriptor
@@ -45,25 +44,29 @@ namespace ExGP.Messages {
 
   }
   #region Messages
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Envelope : pb::IMessage<Envelope> {
     private static readonly pb::MessageParser<Envelope> _parser = new pb::MessageParser<Envelope>(() => new Envelope());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<Envelope> Parser { get { return _parser; } }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::ExGP.Messages.MessageReflection.Descriptor.MessageTypes[0]; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Envelope() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Envelope(Envelope other) : this() {
       Header = other.header_ != null ? other.Header.Clone() : null;
       Route = other.route_ != null ? other.Route.Clone() : null;
@@ -82,6 +85,7 @@ namespace ExGP.Messages {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Envelope Clone() {
       return new Envelope(this);
     }
@@ -89,6 +93,7 @@ namespace ExGP.Messages {
     /// <summary>Field number for the "header" field.</summary>
     public const int HeaderFieldNumber = 1;
     private global::ExGP.Messages.Header header_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::ExGP.Messages.Header Header {
       get { return header_; }
       set {
@@ -99,6 +104,7 @@ namespace ExGP.Messages {
     /// <summary>Field number for the "route" field.</summary>
     public const int RouteFieldNumber = 2;
     private global::ExGP.Messages.Route route_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::ExGP.Messages.Route Route {
       get { return route_; }
       set {
@@ -109,6 +115,7 @@ namespace ExGP.Messages {
     /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 3;
     private global::ExGP.Messages.Transaction transaction_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::ExGP.Messages.Transaction Transaction {
       get { return transaction_; }
       set {
@@ -118,6 +125,7 @@ namespace ExGP.Messages {
 
     /// <summary>Field number for the "auth_payload" field.</summary>
     public const int AuthPayloadFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::ExGP.Messages.AuthPayload AuthPayload {
       get { return payloadCase_ == PayloadOneofCase.AuthPayload ? (global::ExGP.Messages.AuthPayload) payload_ : null; }
       set {
@@ -128,6 +136,7 @@ namespace ExGP.Messages {
 
     /// <summary>Field number for the "internal_payload" field.</summary>
     public const int InternalPayloadFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::ExGP.Messages.InternalPayload InternalPayload {
       get { return payloadCase_ == PayloadOneofCase.InternalPayload ? (global::ExGP.Messages.InternalPayload) payload_ : null; }
       set {
@@ -138,6 +147,7 @@ namespace ExGP.Messages {
 
     /// <summary>Field number for the "connection_payload" field.</summary>
     public const int ConnectionPayloadFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::ExGP.Messages.ConnectionPayload ConnectionPayload {
       get { return payloadCase_ == PayloadOneofCase.ConnectionPayload ? (global::ExGP.Messages.ConnectionPayload) payload_ : null; }
       set {
@@ -155,19 +165,23 @@ namespace ExGP.Messages {
       ConnectionPayload = 6,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PayloadOneofCase PayloadCase {
       get { return payloadCase_; }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void ClearPayload() {
       payloadCase_ = PayloadOneofCase.None;
       payload_ = null;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Envelope);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Equals(Envelope other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -185,6 +199,7 @@ namespace ExGP.Messages {
       return true;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
       if (header_ != null) hash ^= Header.GetHashCode();
@@ -197,10 +212,12 @@ namespace ExGP.Messages {
       return hash;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       if (header_ != null) {
         output.WriteRawTag(10);
@@ -228,6 +245,7 @@ namespace ExGP.Messages {
       }
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
       if (header_ != null) {
@@ -251,6 +269,7 @@ namespace ExGP.Messages {
       return size;
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(Envelope other) {
       if (other == null) {
         return;
@@ -287,6 +306,7 @@ namespace ExGP.Messages {
 
     }
 
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

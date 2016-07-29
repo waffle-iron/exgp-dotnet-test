@@ -5,8 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
-using ExGP.Message;
-
+using ExGP.Messages;
 
 namespace exgp_dotnet_test
 {
